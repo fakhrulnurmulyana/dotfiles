@@ -5,28 +5,14 @@ return {
 		build = ":TSUpdate",
 
 		config = function()
-			require("nvim-treesitter").setup {
-				ensure_installed = {
-					"lua",
-					"python",
-					"rust",
-					"c",
-					"bash",
-					"json",
-					"markdown",
-					"vim",
-					"vimdoc",
-				},
-
-				auto_install = true,
-
-				highlight = {
-					enable = true,
-				},
-
-				indent = {
-					enable = true,
-				},
+			require('nvim-treesitter').install{
+				"lua",
+				"python",
+				"rust",
+				"c",
+				"bash",
+				"json",
+				"markdown",
 			}
 		end,
 	},
