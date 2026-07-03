@@ -10,7 +10,8 @@ return {
 					functions = false,
 					strings = false,
 					variables = false,
-				}
+				},
+				overrides = {}
 			}
 			vim.cmd.colorscheme('gruvbox')
 		end,

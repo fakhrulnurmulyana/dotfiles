@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "llama3.2:1b",
+      "enable_thinking": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "terminal": {
+    "shell": {
+      "program": "powershell.exe",
+    },
+  },
+  "buffer_font_family": "MesloLGS Nerd Font",
+  "vim_mode": true,
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true,
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Clean VSCode Icon Theme",
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Dracula Light (Alucard)",
+    "dark": "The Dark Side",
+  },
+}

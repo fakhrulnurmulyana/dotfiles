@@ -6,7 +6,6 @@ return {
 		config = function()
 			require('lualine').setup{
 				winbar = {
-					lualine_c = {'filename'},
 					lualine_a = {'mode'},
 					lualine_b = {'branch', 'diff', 'diagnostics'},
 					lualine_c = {'filename'},
@@ -15,16 +14,21 @@ return {
 					lualine_z = {'location'},
 				},
 				
-				sections = {
-					lualine_c = {},
-					lualine_a = {},
-					lualine_b = {},
-					lualine_c = {},
-					lualine_x = {},
-					lualine_y = {},
-					lualine_z = {},
+				sections = {},
+
+				inactive_sections = {},
+
+				options = {
+					theme = {
+						normal = {
+							a = { fg = "#1d2021", bg = "#83a598", gui = "bold" },
+							b = { fg = "#ebdbb2", bg = "#3c3836" },
+							c = { fg = "#ebdbb2", bg = "#282828" },
+						},
+					},
 				},
 			}
+			vim.opt.laststatus=0
 		end,
 	},
 }

@@ -1,0 +1,6 @@
+window, .inner_box, .outer_box, .toolbar {
+    background-color: #1a1a1a;
+}
+label, button {
+    color: #b5b4b2;
+}

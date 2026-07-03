@@ -1,0 +1,97 @@
+{
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center":["clock"], 
+	"modules-right": [
+		"network",
+		"bluetooth",
+		"cpu",
+		"memory",
+		"temperature",
+		"backlight",
+		"wireplumber",
+		"custom/ac-battery"
+	],
+	"sway/window": {
+		"max-length": 50
+	},
+	"width": 1520, 
+	"custom/ac-battery": {
+		"exec": "~/.config/waybar/scripts/check_ac.sh",
+		"return-type": "json",
+		"interval": 5,
+		"tooltip": true,
+
+		"format": "{icon} {text}%",
+		"format-icons": {
+			"default": ["", "", "", "", ""]
+		}
+	},
+	"clock": {
+		"format": " {:%H:%M \t  %a, %d %b}",
+		"tooltip": true,
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode"          : "month",
+			"mode-mon-col"  : 3,
+			"weeks-pos"     : "right",
+			"on-scroll"     : 1,
+			"format": {
+			    "months":     "<span color='#ffead3'><b>{}</b></span>",
+			    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+			    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+			    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+			    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions":  {
+			"on-click-right": "mode",
+			"on-scroll-up": "shift_down",
+			"on-scroll-down": "shift_up"
+		}
+	},
+	"wireplumber": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟 {volume}%",
+		"format-icons":{
+			"default": ["󰖀", "󰕾"]  
+		},
+		"tooltip": false
+	},
+	"bluetooth": {
+		"format": " UNCONNECTED",
+		"format-disabled": "󰂲 OFF",
+		"format-off": "󰂲 OFF",
+		"format-connected": " {device_alias}",
+		"format-connected-battery": " ",
+		"tooltip-format-connected": "Device : {device_enumerate}\nBattery : {device_battery_percentage}%",
+		"tooltip-format-enumerate-connected": "{device_alias}",
+		"on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh" 
+	},
+	"network": {
+		"format-wifi": "  {essid}",
+		"format-ethernet": "󰈀 {essid}",
+		"format-disable": "󰖪 OFF",
+		"format-disconnected": "󰖪 DISCONNECTED",
+		"tooltip-format": "Connection: {essid} \nStrength: {signalStrength}% \nFrequency: {frequency}GHz"
+	},
+	"cpu": {
+		"format": "  {usage}%",
+		"tooltip": true
+	},
+	"memory": {
+		"format": "󰍛  {}%",
+		"tooltip": true
+	},
+	"temperature": {
+		"thermal-zone": 0,
+		"critical-threshold": 80,
+		"format": "  {temperatureC}°C",
+		"format-critical": "  {temperatureC}°C",
+		"tooltip": false
+	},
+	"backlight": {
+		"format": "󰃠  {percent}%",
+		"tooltip": false
+	}
+}
