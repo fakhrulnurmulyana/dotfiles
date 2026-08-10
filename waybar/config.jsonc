@@ -1,6 +1,10 @@
 {
 	"layer": "top",
-	"modules-left": ["hyprland/workspaces"],
+	"modules-left": [
+		"hyprland/workspaces",
+		"power-profiles-daemon",
+		"custom/network-speed"
+	],
 	"modules-center":["clock"], 
 	"modules-right": [
 		"network",
@@ -16,6 +20,10 @@
 		"max-length": 50
 	},
 	"width": 1520, 
+	"custom/network-speed": {
+		"exec" : "~/.config/waybar/scripts/network_speed.sh",
+		"interval": 1
+	},
 	"custom/ac-battery": {
 		"exec": "~/.config/waybar/scripts/check_ac.sh",
 		"return-type": "json",

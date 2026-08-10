@@ -70,6 +70,7 @@ button:hover {
 #clock,
 #battery,
 #custom-ac-battery
+#custom-network-speed
 #cpu,
 #memory,
 #disk,
@@ -85,6 +86,13 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #bluetooth,
+
+#custom-network-speed{
+    color: #ffffff;
+    min-width: 40px;
+    padding: 0 12px;
+}
+
 
 #custom-ac-battery {
     color: #ffffff;
@@ -142,6 +150,7 @@ button:hover {
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
+    border-right: 1px solid #444;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
@@ -187,17 +196,17 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
+    background-color: #fc3203;
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    background-color: #ffffff;
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
+    background-color: #85b474;
     color: #000000;
 }
 

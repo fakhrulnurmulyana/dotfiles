@@ -8,5 +8,7 @@ config_version: 2
 settings:
   colors.webpage.darkmode.enabled:
     global: true
-  content.notifications.enabled:
-    https://web.whatsapp.com: true
+  tabs.max_width:
+    global: 250
+  tabs.width:
+    global: 120

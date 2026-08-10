@@ -18,7 +18,7 @@
     "height": 864,
     "isMaximized": true
   },
-  "zoomFactor": 0.9,
+  "zoomFactor": 1,
   "quickCaptureHotkey": "CommandOrControl+Shift+Space",
   "quickCapturePinned": false
 }
