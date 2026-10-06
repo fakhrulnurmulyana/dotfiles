@@ -10,6 +10,9 @@ vim.opt.wrap = false
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>t', '<cmd>Neotree toggle<cr>', {
+  desc = 'Toggle Neo-tree',
+})
 
 vim.api.nvim_create_user_command(
 	"E",

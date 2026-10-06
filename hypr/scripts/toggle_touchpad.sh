@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 DEVICE="asue1201:00-04f3:3125-touchpad"
-STATE_FILE="/tmp/hypr-touchpad-disabled"
+STATE_FILE= ~/dotfiles/hypr/hypr-touchpad-disabled
 
 if [[ -f "$STATE_FILE" ]]; then
-    hyprctl keyword "device[$DEVICE]:enabled" true
-    rm "$STATE_FILE"
+    # Enable touchpad
+    hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = true })"
+    rm -f "$STATE_FILE"
 else
-    hyprctl keyword "device[$DEVICE]:enabled" false
+    # Disable touchpad
+    hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = false })"
     touch "$STATE_FILE"
 fi
